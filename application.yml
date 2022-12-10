@@ -1,10 +1,20 @@
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+
 spring:
+    application:
+        name: profile
     datasource:
         url: jdbc:mysql://tecreations.ca:3306/rentCloudDB?createDatabaseIfNotExist=true
         username: rentcloud
         password: rentCloudPass69$$$
-        driver-class-name: com.mysql.jdbc.Driver
     jpa:
+        generate-ddl: true
         hibernate:
-            naming:
-                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+            ddl-auto: create
+        show-sql: true
+    hikari:
+        keepAliveTime: 28800
