@@ -1,5 +1,3 @@
-debug: true
-
 management:
     endpoints:
         web:
@@ -7,8 +5,6 @@ management:
                 include: '*'
 
 spring:
-    application:
-        name: profile
     datasource:
         url: jdbc:mysql://tecreations.ca:3306/rentCloudDB?createDatabaseIfNotExist=true
         username: rentcloud
@@ -20,7 +16,6 @@ spring:
         show-sql: true
     hikari:
         keepAliveTime: 28800
-        
     main:
         banner-mode: CONSOLE 
     output:
