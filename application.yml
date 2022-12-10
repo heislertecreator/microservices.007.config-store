@@ -1,3 +1,5 @@
+debug: true
+
 management:
     endpoints:
         web:
@@ -14,7 +16,13 @@ spring:
     jpa:
         generate-ddl: true
         hibernate:
-            ddl-auto: create
+            ddl-auto: update
         show-sql: true
     hikari:
         keepAliveTime: 28800
+        
+    main:
+        banner-mode: CONSOLE 
+    output:
+        ansi:
+            enabled: ALWAYS          
